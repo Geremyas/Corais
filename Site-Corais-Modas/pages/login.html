@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Corais Modas</title>
+    <!-- CSS vinculado -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Ícones Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="header">
+        <div class="logo-bar">
+            <h1 class="logo">Corais Modas</h1>
+
+            <div class="header-auth">
+                <a href="login.html" class="active-auth">Login</a>
+                <span class="auth-divider"></span>
+                <a href="register.html">Cadastrar</a>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav">
+                <a href="../index.html">INÍCIO</a>
+                <a href="#">MODA PRAIA</a>
+                <a href="#">MODA FITNESS</a>
+                <a href="#">BOLSAS</a>
+                <a href="#">BIJUS</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo de Login -->
+    <main class="container auth-container">
+        <div class="auth-card">
+            <h2 class="auth-title">Acessar sua Conta</h2>
+            <p class="auth-subtitle">Entre com seus dados para gerenciar seus pedidos e compras.</p>
+
+            <form class="auth-form" id="loginForm" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="loginEmail">Endereço de e-mail</label>
+                    <input type="email" id="loginEmail" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-wrapper">
+                        <label for="loginPassword">Senha</label>
+                        <a href="#" class="forgot-link">Esqueceu a senha?</a>
+                    </div>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-auth">Entrar</button>
+            </form>
+
+            <div class="auth-footer-text">
+                <p>Ainda não tem uma conta? <a href="register.html">Cadastre-se aqui</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Corais Modas</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-whatsapp-logo"></i></a>
+                    <a href="about.html" title="Envie um e-mail / Fale conosco" target="_blank" rel="noopener noreferrer">
+                        <i class="ph ph-envelope-simple"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>MENSAGEM</h4>
+                    <a href="#">Página</a>
+                    <a href="#">Página</a>
+                </div>
+                <div class="footer-col">
+                    <h4>MENSAGEM</h4>
+                    <a href="#">Página</a>
+                    <a href="#">Página</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript vinculado -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

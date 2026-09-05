@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - Corais Modas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header (O mesmo padrão das outras páginas) -->
+    <header class="header">
+        <div class="logo-bar">
+            <h1 class="logo">Corais Modas</h1>
+            <div class="header-auth">
+                <a href="login.html">Login</a>
+                <span>|</span>
+                <a href="register.html">Cadastrar</a>
+                <button id="cartOpenBtn" class="cart-toggle-btn">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav container">
+                <a href="../index.html">INÍCIO</a>
+                <a href="#">MODA PRAIA</a>
+                <a href="#">MODA FITNESS</a>
+                <a href="#">BOLSAS</a>
+                <a href="#">BIJUS</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrinho Lateral Oculto (Precisa existir para o JS não dar erro) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-offcanvas" id="cartOffcanvas">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="cart-close-btn" id="cartCloseBtn"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Total:</span><span id="cartTotalValue">R$ 0,00</span></div>
+            <a href="carrinho.html" class="btn-comprar" style="display:block; width:100%; text-align:center;">Ir para o Carrinho</a>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         PÁGINA DEDICADA DO CARRINHO
+         ======================================================================= -->
+    <main class="section container cart-page">
+        <h1 class="section-title" style="text-align: left; margin-bottom: 30px;">Meu Carrinho</h1>
+
+        <div class="cart-page-layout">
+            <!-- Coluna Esquerda: Lista de Produtos -->
+            <div class="cart-page-items-wrapper">
+                <!-- Cabeçalho da tabela de itens -->
+                <div class="cart-table-header">
+                    <span>Produto</span>
+                    <span>Qtd</span>
+                    <span>Subtotal</span>
+                </div>
+                
+                <!-- O JavaScript vai injetar os itens aqui dentro -->
+                <div id="cartPageItems">
+                    <!-- Itens carregados dinamicamente -->
+                </div>
+            </div>
+
+            <!-- Coluna Direita: Resumo do Pedido -->
+            <div class="cart-page-summary">
+                <h3>Resumo do Pedido</h3>
+                
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cartPageSubtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Frete</span>
+                    <span>A calcular</span>
+                </div>
+                
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="cartPageTotal">R$ 0,00</span>
+                </div>
+
+                <button class="btn-comprar btn-finalizar">Finalizar Compra</button>
+                <a href="../index.html" class="btn-continuar">Continuar Comprando</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 20px 0; border-top: 1px solid #ddd; margin-top: 40px; font-size: 14px; color: #666;">
+            &copy; 2026 Corais Modas. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
