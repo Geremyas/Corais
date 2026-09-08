@@ -13,13 +13,17 @@
     <div class="logo-bar">
         <h1 class="logo">Corais Modas</h1>
         <div class="header-auth">
-            <a href="/pages/login.html">Login</a>
+            <a href="pages/login.html">Login</a>
             <span>|</span>
-            <a href="/pages/register.html">Cadastrar</a>
+            <a href="pages/register.html">Cadastrar</a>
             <!-- Ícone do Carrinho adicionado aqui -->
             <button id="cartOpenBtn" class="cart-toggle-btn">
                 <i class="ph ph-shopping-cart"></i>
                 <span id="cartCount">0</span>
+            </button>
+            <!-- Botão para alternar entre tema claro e escuro -->
+            <button id="themeToggle" class="theme-toggle" type="button">
+                <i class="ph ph-moon"></i>
             </button>
         </div>
     </div>
@@ -153,7 +157,7 @@
                     <div class="split-text">
                         <h3>Câmera Retro Polaroid</h3>
                         <p>Registre seus melhores momentos do verão com um toque vintage inesquecível e revelação instantânea.</p>
-                        <span class="price" style="display: block; font-size: 22px; font-weight: 800; color: #111; margin: 15px 0;">R$ 399,90</span>
+                        <span class="price" style="display: block; font-size: 22px; font-weight: 800; color: var(--cor-texto); margin: 15px 0;">R$ 399,90</span>
                         <a href="pages/produto.html" class="btn-comprar" style="max-width: 250px;">Ver Detalhes</a>
                     </div>
                     <div class="split-image">
@@ -165,7 +169,7 @@
                     <div class="split-text">
                         <h3>Kit Autocuidado & SPA</h3>
                         <p>Linha exclusiva de hidratantes e aromas suaves para nutrir a pele após um dia ensolarado de praia.</p>
-                        <span class="price" style="display: block; font-size: 22px; font-weight: 800; color: #111; margin: 15px 0;">R$ 159,90</span>
+                        <span class="price" style="display: block; font-size: 22px; font-weight: 800; color: var(--cor-texto); margin: 15px 0;">R$ 159,90</span>
                         <a href="pages/produto.html" class="btn-comprar" style="max-width: 250px;">Ver Detalhes</a>
                     </div>
                     <div class="split-image">
@@ -177,7 +181,7 @@
                     <div class="split-text">
                         <h3>Óculos de Sol Verão</h3>
                         <p>Design moderno com proteção UV400 completa, pensado para destacar seu visual em qualquer ocasião.</p>
-                        <span class="price" style="display: block; font-size: 22px; font-weight: 800; color: #111; margin: 15px 0;">R$ 129,90</span>
+                        <span class="price" style="display: block; font-size: 22px; font-weight: 800; color: var(--cor-texto); margin: 15px 0;">R$ 129,90</span>
                         <a href="pages/produto.html" class="btn-comprar" style="max-width: 250px;">Ver Detalhes</a>
                     </div>
                     <div class="split-image">
@@ -324,41 +328,36 @@
 
     <script src="js/script.js"></script>
 
-<!-- =======================================================================
-         CARRINHO LATERAL (OFFCANVAS)
-         ======================================================================= -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-offcanvas" id="cartOffcanvas">
-        <div class="cart-header">
-            <h2>Seu Carrinho</h2>
-            <button class="cart-close-btn" id="cartCloseBtn"><i class="ph ph-x"></i></button>
-        </div>
-        
-        <div class="cart-items" id="cartItemsContainer">
-            <!-- Os itens serão injetados aqui pelo JavaScript -->
-        </div>
-        
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cartTotalValue">R$ 0,00</span>
-            </div>
-            <button class="btn-comprar" style="width: 100%; font-size: 16px;">Finalizar Compra</button>
-        </div>
+<!-- Carrinho Lateral Oculto -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-offcanvas" id="cartOffcanvas">
+
+    <div class="cart-header">
+        <h2>Seu Carrinho</h2>
+
+        <button class="cart-close-btn" id="cartCloseBtn">
+            <i class="ph ph-x"></i>
+        </button>
     </div>
 
-<!-- Carrinho Lateral Oculto -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-offcanvas" id="cartOffcanvas">
-        <div class="cart-header">
-            <h2>Seu Carrinho</h2>
-            <button class="cart-close-btn" id="cartCloseBtn"><i class="ph ph-x"></i></button>
-        </div>
-        <div class="cart-items" id="cartItemsContainer"></div>
-        <div class="cart-footer">
-            <div class="cart-total"><span>Total:</span><span id="cartTotalValue">R$ 0,00</span></div>
-            <a href="carrinho.html" class="btn-comprar" style="display:block; width:100%; text-align:center; text-decoration:none;">Ir para o Carrinho</a>
-        </div>
+    <div class="cart-items" id="cartItemsContainer">
     </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotalValue">R$ 0,00</span>
+        </div>
+
+        <a href="carrinho.html"
+           class="btn-comprar"
+           style="display:block; width:100%; text-align:center; text-decoration:none;">
+            Ir para o Carrinho
+        </a>
+    </div>
+</div>
+
 </body>
 </html>

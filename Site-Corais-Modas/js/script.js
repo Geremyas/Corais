@@ -556,3 +556,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 /*lgre*/
+
+// ==========================================================================
+// Tema Claro / Escuro
+// ==========================================================================
+const themeButton = document.getElementById('themeToggle');
+
+if (themeButton) {
+    const savedTheme = localStorage.getItem('corais_theme');
+
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeButton.innerHTML = '<i class="ph ph-sun"></i>';
+    }
+
+    themeButton.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+        if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('corais_theme', 'light');
+            themeButton.innerHTML = '<i class="ph ph-moon"></i>';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('corais_theme', 'dark');
+            themeButton.innerHTML = '<i class="ph ph-sun"></i>';
+        }
+    });
+}
