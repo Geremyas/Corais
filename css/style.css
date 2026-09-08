@@ -1793,6 +1793,20 @@ body {
     color: #ffffff;
 }
 
+/* Botão Remover do carrinho lateral */
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+[data-theme="dark"] .cart-item-remove {
+    color: #ff6b6b;
+}
+
 /* ========================================================================== */
 /* Ajuste do rodapé do carrinho lateral */
 /* ========================================================================== */
@@ -1810,4 +1824,31 @@ body {
     margin-bottom: 15px;
     font-size: 16px;
     font-weight: 700;
+}
+
+/* ========================================================================== */
+/* Rodapé da página inicial - Mobile */
+/* ========================================================================== */
+
+@media (max-width: 768px) {
+    .footer-home .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-home .social-icons {
+        justify-content: center;
+    }
+
+    .footer-home .footer-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-home .footer-col {
+        text-align: center;
+    }
 }
