@@ -690,7 +690,7 @@ body {
     /* Header & Barra Superior */
     .logo-bar {
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         padding: 15px 20px;
         gap: 10px;
     }
