@@ -715,6 +715,7 @@ body {
     .nav {
         display: flex;
         justify-content: flex-start;
+        width: max-content; /* "A largura do .nav deve ser suficiente para comportar todos os links. */
         padding: 10px 15px;
         gap: 20px;
     }
@@ -1398,7 +1399,7 @@ body {
     position: fixed;
     top: 0;
     right: -400px;
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     height: 100vh;
     background: #fff;
@@ -1790,4 +1791,23 @@ body {
 
 [data-theme="dark"] .social-icons a:hover i {
     color: #ffffff;
+}
+
+/* ========================================================================== */
+/* Ajuste do rodapé do carrinho lateral */
+/* ========================================================================== */
+
+.cart-footer {
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border-top: 1px solid var(--cor-borda);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
 }
