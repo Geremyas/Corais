@@ -1857,3 +1857,7 @@ body {
 body.cart-open {
     overflow: hidden;
 }
+
+.cart-footer {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
