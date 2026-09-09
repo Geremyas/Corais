@@ -390,9 +390,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cart = cart.map(item => ({ ...item, quantity: item.quantity || 1 }));
 
     function toggleCart() {
-        if (cartOverlay) cartOverlay.classList.toggle('active');
-        if (cartOffcanvas) cartOffcanvas.classList.toggle('active');
-    }
+    if (cartOverlay) cartOverlay.classList.toggle('active');
+    if (cartOffcanvas) cartOffcanvas.classList.toggle('active');
+
+    document.body.classList.toggle('cart-open');
+}
 
     if (cartOpenBtn) cartOpenBtn.addEventListener('click', toggleCart);
     if (cartCloseBtn) cartCloseBtn.addEventListener('click', toggleCart);

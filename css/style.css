@@ -1852,3 +1852,8 @@ body {
         text-align: center;
     }
 }
+
+/* Bloqueia o scroll da página quando o carrinho lateral está aberto */
+body.cart-open {
+    overflow: hidden;
+}
