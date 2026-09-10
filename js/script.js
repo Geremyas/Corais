@@ -580,6 +580,19 @@ if (themeButton) {
         themeButton.innerHTML = '<i class="ph ph-sun"></i>';
     }
 
+    // Atualiza o tema ao retornar para a página após usar o botão Voltar do celular
+    window.addEventListener('pageshow', () => {
+        const savedTheme = localStorage.getItem('corais_theme');
+
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeButton.innerHTML = '<i class="ph ph-sun"></i>';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeButton.innerHTML = '<i class="ph ph-moon"></i>';
+        }
+    });
+
     themeButton.addEventListener('click', () => {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
 
