@@ -546,6 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 updateCartUI();
+                console.log('Carrinho salvo:', localStorage.getItem('corais_cart'));
                 toggleCart(); // Abre o carrinho
             } else {
                 alert('Por favor, selecione um tamanho antes de adicionar ao carrinho.');
@@ -555,6 +556,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Renderiza a primeira vez
     updateCartUI();
+
+    // Atualiza o carrinho ao retornar para a página após usar o botão Voltar do celular
+    window.addEventListener('pageshow', () => {
+    cart = JSON.parse(localStorage.getItem('corais_cart')) || [];
+    cart = cart.map(item => ({ ...item, quantity: item.quantity || 1 }));
+    updateCartUI();
+});
 
 });
 /*lgre*/
